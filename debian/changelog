@@ -1,4 +1,4 @@
-gpio-pic32 (1.0.0) buster; urgency=low
+gpio-pic32 (1.0.0.stretch.1) stretch; urgency=low
 
   * Initial release
 
