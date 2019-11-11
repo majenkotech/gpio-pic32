@@ -1,0 +1,11 @@
+Source: gpio-pic32
+Section: contrib
+Priority: extra
+Maintainer: Serge Vakulenko <serge-vakulenko@example.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+
+Package: gpio-pic32
+Section: contrib
+Architecture: mipsel
+Description: PIC32 GPIO Control

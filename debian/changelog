@@ -1,0 +1,6 @@
+gpio-pic32 (1.0.0) buster; urgency=low
+
+  * Initial release
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Sun, 10 Nov 2019 20:05:31 +0000
+
