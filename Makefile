@@ -1,21 +1,26 @@
-PROG            = gpio
-DESTDIR         = /usr/local/bin
+PROG		= gpio
 CFLAGS		= -O -Wall -Werror
-LIB             =
-OBJ             = main.o gpio.o alt.o
+LIB		=
+OBJ		= main.o gpio.o alt.o
+
+ifdef DESTDIR
+bindir		= $(DESTDIR)/usr/bin
+else
+bindir		= /usr/local/bin
+endif
 
 all:		$(PROG)
 
-gpio:           $(OBJ)
+gpio:		$(OBJ)
 		$(CC) $(LDFLAGS) $(OBJ) $(LIB) -o $@
 
 clean:
 		rm -f $(PROG) *.o
 
-install:        gpio
-		sudo cp -a gpio $(DESTDIR)/gpio
-		sudo chown root $(DESTDIR)/gpio
-		sudo chmod u+s $(DESTDIR)/gpio
+install:	gpio
+		mkdir -p $(bindir)
+		install -m 4755 gpio $(bindir)/gpio
+
 ###
 alt.o: alt.c gpio.h
 gpio.o: gpio.c gpio.h
